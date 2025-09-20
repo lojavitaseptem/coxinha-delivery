@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#e63946">
+    <title>Coxinhas Delivery by Bita Septem</title>
+    <meta name="description" content="As melhores coxinhas da cidade, direto no seu WhatsApp!"
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Coxinhas Delivery</h1>
+                    <span>by Bita Septem</span>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V16.5M9 19.5C9.8 19.5 10.5 20.2 10.5 21S9.8 22.5 9 22.5 7.5 21.8 7.5 21 8.2 19.5 9 19.5ZM20 19.5C20.8 19.5 21.5 20.2 21.5 21S20.8 22.5 20 22.5 18.5 21.8 18.5 21 19.2 19.5 20 19.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">As melhores coxinhas da cidade</h2>
+                <p class="hero-subtitle">Direto no seu WhatsApp!</p>
+                <button class="cta-btn" onclick="scrollToSection('categorias')">Ver Cardápio</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="categories" id="categorias">
+        <div class="container">
+            <h3 class="section-title">Categorias</h3>
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="coxinhas">Coxinhas</button>
+                <button class="category-btn" data-category="combos">Combos</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+                <button class="category-btn" data-category="sobremesas">Sobremesas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="products" id="produtos">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Coxinhas -->
+                <div class="product-card" data-category="coxinhas">
+                    <div class="product-image">
+                        <img src="assets/images/coxinha-frango.jpg" alt="Coxinha de Frango" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">Coxinha de Frango</h4>
+                        <p class="product-description">Tradicional coxinha com frango desfiado temperado</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 4,50</span>
+                            <button class="add-btn" data-product='{"id": 1, "name": "Coxinha de Frango", "price": 4.50, "category": "coxinhas"}'>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="coxinhas">
+                    <div class="product-image">
+                        <img src="assets/images/coxinha-catupiry.jpg" alt="Coxinha de Catupiry" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">Coxinha de Catupiry</h4>
+                        <p class="product-description">Cremosa coxinha recheada com catupiry original</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 5,00</span>
+                            <button class="add-btn" data-product='{"id": 2, "name": "Coxinha de Catupiry", "price": 5.00, "category": "coxinhas"}'>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combos -->
+                <div class="product-card" data-category="combos">
+                    <div class="product-image">
+                        <img src="assets/images/combo-familia.jpg" alt="Combo Família" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">Combo Família</h4>
+                        <p class="product-description">10 coxinhas variadas + 2 refrigerantes</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 35,00</span>
+                            <button class="add-btn" data-product='{"id": 3, "name": "Combo Família", "price": 35.00, "category": "combos"}'>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="product-card" data-category="bebidas">
+                    <div class="product-image">
+                        <img src="assets/images/refrigerante.jpg" alt="Refrigerante" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">Refrigerante Lata</h4>
+                        <p class="product-description">Coca-Cola, Guaraná ou Fanta - 350ml</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 4,00</span>
+                            <button class="add-btn" data-product='{"id": 4, "name": "Refrigerante Lata", "price": 4.00, "category": "bebidas"}'>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sobremesas -->
+                <div class="product-card" data-category="sobremesas">
+                    <div class="product-image">
+                        <img src="assets/images/brigadeiro.jpg" alt="Brigadeiro" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name">Brigadeiro Gourmet</h4>
+                        <p class="product-description">Brigadeiro artesanal com chocolate belga</p>
+                        <div class="product-footer">
+                            <span class="product-price">R$ 3,00</span>
+                            <button class="add-btn" data-product='{"id": 5, "name": "Brigadeiro Gourmet", "price": 3.00, "category": "sobremesas"}'>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrinho Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Seu Pedido</h3>
+                <button class="close-cart" id="closeCart">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <p>Seu carrinho está vazio</p>
+                    <p>Adicione alguns produtos deliciosos!</p>
+                </div>
+            </div>
+            
+            <!-- Formulário de Dados do Cliente -->
+            <div class="customer-form" id="customerForm" style="display: none;">
+                <h4>Dados para Entrega</h4>
+                <div class="form-group">
+                    <label for="customerName">Nome Completo *</label>
+                    <input type="text" id="customerName" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Endereço Completo *</label>
+                    <textarea id="customerAddress" placeholder="Rua, número, bairro, cidade..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="needChange">Precisa de troco?</label>
+                    <div class="change-options">
+                        <label class="radio-option">
+                            <input type="radio" name="needChange" value="no" checked>
+                            <span>Não preciso de troco</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="needChange" value="yes">
+                            <span>Sim, preciso de troco</span>
+                        </label>
+                    </div>
+                    <input type="number" id="changeAmount" placeholder="Troco para quanto?" style="display: none;" step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="orderNotes">Observações</label>
+                    <textarea id="orderNotes" placeholder="Alguma observação especial? (opcional)"></textarea>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: R$ <span id="cartTotal">0,00</span></span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                    </svg>
+                    Enviar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Coxinhas Delivery by Bita Septem. Todos os direitos reservados.</p>
+                <a href="https://wa.me/5598985197515" class="whatsapp-link" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
